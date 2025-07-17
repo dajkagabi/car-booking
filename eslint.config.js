@@ -15,7 +15,7 @@ export default defineConfig([
     ],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: globals.browser, 
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
@@ -24,6 +24,20 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
+
+  {
+    files: ['tailwind.config.js', 'postcss.config.js'], 
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.node, 
+      },
+      sourceType: 'script', 
+    },
+    rules: {
+      
     },
   },
 ])
