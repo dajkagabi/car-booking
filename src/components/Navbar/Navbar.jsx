@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center justify-end w-[115px] pr-4">
-          <img src={logo} alt="BookaCar" className="h-16 -mt-2" />
+          <img src={logo} alt="AutoDrive" className="h-16 -mt-2" />
         </Link>
 
         {/* Desktop  */}
