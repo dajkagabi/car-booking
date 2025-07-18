@@ -1,82 +1,357 @@
-import React from 'react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import logo from '/src/assets/lgs.png'; 
+import React from "react";
+import logo from "/src/assets/lgs.png";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#005660] text-white py-6 text-sm">
-      <div className="max-w-7xl mx-auto px-6">
-    
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          {/* Logo + Leírás + Social */}
-          <div className="md:col-span-1">
-            <div className="flex items-center mb-4">
-              <img src={logo} alt="AutoDrive Logo" className="w-10 h-10 mr-2" />
-              <h2 className="text-xl font-bold">AutoDrive</h2>
+    <footer className="bg-white">
+      {/* A py-8 helyett py-6-ot használunk a függőleges térköz csökkentésére */}
+      <div className="mx-auto max-w-screen-xl px-4 py-6 sm:px-6 lg:px-8">
+        <div className="lg:flex lg:items-start lg:gap-8">
+          <div className="text-teal-600">
+            {/* A logó magasságát h-25-ről h-16-ra csökkentjük */}
+            <img src={logo} alt="AutoDrive Logo" className="h-16 w-auto" />
+          </div>
+
+          {/* Az mt-8 helyett mt-4-et használunk a felső margó csökkentésére */}
+          <div className="mt-4 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
+            {/* Newsletter */}
+            <div className="col-span-2">
+              <div>
+                {/* A szövegméretet 2xl-ről xl-re csökkentjük */}
+                <h2 className="text-xl font-bold text-gray-900">
+                  Get the latest news!
+                </h2>
+                {/* A szövegméretet alapértelmezetten kisebbre vesszük, pl. text-sm */}
+                <p className="mt-2 text-sm text-gray-500">
+                  Stay updated with AutoDrive's newest arrivals and special
+                  offers directly in your inbox.
+                </p>
+              </div>
             </div>
-            <p className="text-sm mb-4">AutoDrive offers premium car selection with exceptional service. Find your perfect vehicle with our expert guidance.</p>
-            <div className="flex space-x-4 text-white">
-              <a href="#" className="hover:text-blue-500"><FacebookIcon fontSize="small" /></a>
-              <a href="#" className="hover:text-sky-400"><TwitterIcon fontSize="small" /></a>
-              <a href="#" className="hover:text-pink-500"><InstagramIcon fontSize="small" /></a>
-              <a href="#" className="hover:text-red-500"><YouTubeIcon fontSize="small" /></a>
+
+            <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
+              <form className="w-full">
+                <label htmlFor="UserEmail" className="sr-only">
+                  {" "}
+                  Email{" "}
+                </label>
+                <div className="border border-gray-100 p-2 focus-within:ring-3 sm:flex sm:items-center sm:gap-4">
+                  <input
+                    type="email"
+                    id="UserEmail"
+                    placeholder="your-email@example.com"
+                    className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm"
+                  />
+                  <button className="mt-1 w-full bg-teal-500 px-6 py-3 text-sm font-bold tracking-wide text-white uppercase transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0">
+                    Sign Up
+                  </button>
+                </div>
+              </form>
             </div>
-          </div>
 
-      
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-gray-300">About Us</a></li>
-              <li><a href="#" className="hover:text-gray-300">Careers</a></li>
-              <li><a href="#" className="hover:text-gray-300">Blog</a></li>
-              <li><a href="#" className="hover:text-gray-300">Press</a></li>
+            {/* Services */}
+            <div className="col-span-2 sm:col-span-1">
+              {/* A szövegméretet alapértelmezetten kisebbre vesszük */}
+              <p className="font-medium text-gray-900 text-base">Services</p>
+              {/* Az mt-6 helyett mt-4-et használunk */}
+              <ul className="mt-4 space-y-2 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Car Sales{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Financing{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Trade-In{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Leasing{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    After-sales Support{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div className="col-span-2 sm:col-span-1">
+              {/* A szövegméretet alapértelmezetten kisebbre vesszük */}
+              <p className="font-medium text-gray-900 text-base">Company</p>
+              {/* Az mt-6 helyett mt-4-et használunk */}
+              <ul className="mt-4 space-y-2 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    About Us{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Careers{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Blog{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Press{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Helpful */}
+            <div className="col-span-2 sm:col-span-1">
+              {/* A szövegméretet alapértelmezetten kisebbre vesszük */}
+              <p className="font-medium text-gray-900 text-base">Helpful Links</p>
+              {/* Az mt-6 helyett mt-4-et használunk */}
+              <ul className="mt-4 space-y-2 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Contact Us{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    FAQ{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Customer Support{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div className="col-span-2 sm:col-span-1">
+              {/* A szövegméretet alapértelmezetten kisebbre vesszük */}
+              <p className="font-medium text-gray-900 text-base">Legal</p>
+              {/* Az mt-6 helyett mt-4-et használunk */}
+              <ul className="mt-4 space-y-2 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Terms of Service{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Privacy Policy{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Cookie Policy{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div className="col-span-2 sm:col-span-1">
+              {/* A szövegméretet alapértelmezetten kisebbre vesszük */}
+              <p className="font-medium text-gray-900 text-base">Resources</p>
+              {/* Az mt-6 helyett mt-4-et használunk */}
+              <ul className="mt-4 space-y-2 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Car Buying Guide{" "}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Financing Options{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Social */}
+            {/* Az ikonok méretét size-6-ról size-5-re csökkentjük */}
+            <ul className="col-span-2 flex justify-start gap-4 lg:col-span-5 lg:justify-end">
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  <span className="sr-only">Facebook</span>
+                  <FacebookIcon className="size-5" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  <span className="sr-only">Instagram</span>
+                  <InstagramIcon className="size-5" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  <span className="sr-only">Twitter</span>
+                  <TwitterIcon className="size-5" />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  <span className="sr-only">LinkedIn</span>
+                  <LinkedInIcon className="size-5" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  <span className="sr-only">YouTube</span>
+                  <YouTubeIcon className="size-5" />
+                </a>
+              </li>
             </ul>
-          </div>
-
-     
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-gray-300">Car Sales</a></li>
-              <li><a href="#" className="hover:text-gray-300">Financing</a></li>
-              <li><a href="#" className="hover:text-gray-300">Trade-In</a></li>
-              <li><a href="#" className="hover:text-gray-300">Leasing</a></li>
-            </ul>
-          </div>
-
-        
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-gray-300">FAQ</a></li>
-              <li><a href="#" className="hover:text-gray-300">Contact Us</a></li>
-              <li><a href="#" className="hover:text-gray-300">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-gray-300">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-        
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-            <form className="space-y-3 text-sm">
-              <input type="text" placeholder="Your Name" className="w-full p-2 bg-gray-800 rounded" />
-              <input type="email" placeholder="Your Email" className="w-full p-2 bg-gray-800 rounded" />
-              <textarea placeholder="Your Message" rows="3" className="w-full p-2 bg-gray-800 rounded" />
-              <button type="submit" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded">Send Message</button>
-            </form>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-700 pt-6 text-sm flex flex-wrap justify-between items-center">
-          <p>© 2025 AutoDrive. All rights reserved.</p>
-          <div className="space-x-4">
-            <a href="#" className="hover:text-gray-300">Terms</a>
-            <a href="#" className="hover:text-gray-300">Privacy</a>
-            <a href="#" className="hover:text-gray-300">Cookies</a>
+        {/*Copyright */}
+        {/* Az mt-8 helyett mt-4-et és pt-8 helyett pt-4-et használunk */}
+        <div className="mt-4 border-t border-gray-100 pt-4">
+          <div className="sm:flex sm:justify-between">
+            <p className="text-xs text-gray-500">
+              &copy; {new Date().getFullYear()}. AutoDrive. All rights reserved.
+            </p>
+            {/* Az mt-8 helyett mt-4-et használunk */}
+            <ul className="mt-4 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-500 transition hover:opacity-75"
+                >
+                  {" "}
+                  Terms & Conditions{" "}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-500 transition hover:opacity-75"
+                >
+                  {" "}
+                  Privacy Policy{" "}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-500 transition hover:opacity-75"
+                >
+                  {" "}
+                  Cookies{" "}
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
