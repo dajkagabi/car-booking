@@ -9,24 +9,24 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 const Footer = () => {
   return (
     <footer className="bg-white">
-      {/* A py-8 helyett py-6-ot használunk a függőleges térköz csökkentésére */}
+     
       <div className="mx-auto max-w-screen-xl px-4 py-6 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-start lg:gap-8">
           <div className="text-teal-600">
-            {/* A logó magasságát h-25-ről h-16-ra csökkentjük */}
+            
             <img src={logo} alt="AutoDrive Logo" className="h-16 w-auto" />
           </div>
 
-          {/* Az mt-8 helyett mt-4-et használunk a felső margó csökkentésére */}
+      
           <div className="mt-4 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
             {/* Newsletter */}
             <div className="col-span-2">
               <div>
-                {/* A szövegméretet 2xl-ről xl-re csökkentjük */}
+                
                 <h2 className="text-xl font-bold text-gray-900">
                   Get the latest news!
                 </h2>
-                {/* A szövegméretet alapértelmezetten kisebbre vesszük, pl. text-sm */}
+              
                 <p className="mt-2 text-sm text-gray-500">
                   Stay updated with AutoDrive's newest arrivals and special
                   offers directly in your inbox.
@@ -56,9 +56,9 @@ const Footer = () => {
 
             {/* Services */}
             <div className="col-span-2 sm:col-span-1">
-              {/* A szövegméretet alapértelmezetten kisebbre vesszük */}
+             
               <p className="font-medium text-gray-900 text-base">Services</p>
-              {/* Az mt-6 helyett mt-4-et használunk */}
+              
               <ul className="mt-4 space-y-2 text-sm">
                 <li>
                   <a
@@ -110,9 +110,9 @@ const Footer = () => {
 
             {/* Company */}
             <div className="col-span-2 sm:col-span-1">
-              {/* A szövegméretet alapértelmezetten kisebbre vesszük */}
+            
               <p className="font-medium text-gray-900 text-base">Company</p>
-              {/* Az mt-6 helyett mt-4-et használunk */}
+            
               <ul className="mt-4 space-y-2 text-sm">
                 <li>
                   <a
@@ -155,9 +155,9 @@ const Footer = () => {
 
             {/* Helpful */}
             <div className="col-span-2 sm:col-span-1">
-              {/* A szövegméretet alapértelmezetten kisebbre vesszük */}
+            
               <p className="font-medium text-gray-900 text-base">Helpful Links</p>
-              {/* Az mt-6 helyett mt-4-et használunk */}
+            
               <ul className="mt-4 space-y-2 text-sm">
                 <li>
                   <a
@@ -191,9 +191,9 @@ const Footer = () => {
 
             {/* Legal */}
             <div className="col-span-2 sm:col-span-1">
-              {/* A szövegméretet alapértelmezetten kisebbre vesszük */}
+        
               <p className="font-medium text-gray-900 text-base">Legal</p>
-              {/* Az mt-6 helyett mt-4-et használunk */}
+             
               <ul className="mt-4 space-y-2 text-sm">
                 <li>
                   <a
@@ -227,9 +227,9 @@ const Footer = () => {
 
             {/* Resources */}
             <div className="col-span-2 sm:col-span-1">
-              {/* A szövegméretet alapértelmezetten kisebbre vesszük */}
+          
               <p className="font-medium text-gray-900 text-base">Resources</p>
-              {/* Az mt-6 helyett mt-4-et használunk */}
+             
               <ul className="mt-4 space-y-2 text-sm">
                 <li>
                   <a
@@ -253,7 +253,7 @@ const Footer = () => {
             </div>
 
             {/* Social */}
-            {/* Az ikonok méretét size-6-ról size-5-re csökkentjük */}
+         
             <ul className="col-span-2 flex justify-start gap-4 lg:col-span-5 lg:justify-end">
               <li>
                 <a
@@ -316,13 +316,13 @@ const Footer = () => {
         </div>
 
         {/*Copyright */}
-        {/* Az mt-8 helyett mt-4-et és pt-8 helyett pt-4-et használunk */}
+        
         <div className="mt-4 border-t border-gray-100 pt-4">
           <div className="sm:flex sm:justify-between">
             <p className="text-xs text-gray-500">
               &copy; {new Date().getFullYear()}. AutoDrive. All rights reserved.
             </p>
-            {/* Az mt-8 helyett mt-4-et használunk */}
+          
             <ul className="mt-4 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">
               <li>
                 <a
