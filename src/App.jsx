@@ -6,6 +6,7 @@ import Cars from './components/Cars/Cars';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import BookTestDrive from './components/BookTestDrive/BookTestDrive';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/cars" element={<Cars/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/contact" element={<Contact/>}/>
+      <Route path="/book-test-drive" element={<BookTestDrive/>}/>
     </Routes>
     <Footer/>
     </>
