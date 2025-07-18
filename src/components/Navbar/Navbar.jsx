@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '/src/assets/lg.png';  
+import logo from '/src/assets/lgs.png';  
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +27,7 @@ const Navbar = () => {
      
           <Link
             to="/book-test-drive"
-            className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-300 shadow-md"
+            className="bg-[#005660] text-white py-2 px-4 rounded-md transition duration-300 shadow-md"
           >
             BOOK TEST DRIVE
           </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/book-test-drive"
-            className="block px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 text-center mx-4 my-2 rounded-md transition duration-300"
+            className="block px-4 py-2 text-white bg-[#005660] text-center mx-4 my-2 rounded-md transition duration-300"
             onClick={() => setIsOpen(false)}
           >
             BOOK TEST DRIVE
